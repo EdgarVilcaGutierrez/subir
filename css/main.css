@@ -41,28 +41,60 @@ body {
   }
 
 }
-.titulo_grande{
-  
-  display: grid;
-  place-items: center;
-  margin: auto;
-  position: absolute; left: 40%; transform: translateX(-50%);
-  top: 20%; transform: translateY(-50%);
-  font-family: 'Luckiest Guy';
+/* Estilos Responsivos para .titulo_grande */
+.titulo_grande {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  font-family: 'Luckiest Guy', cursive;
   animation: fadeIn 3s ease-in-out forwards;
   color: orange;
   z-index: 1;
   font-size: 1.7em;
+  width: 80%;
+  max-width: 600px;
 }
-.titulo_grande h1{
+
+.titulo_grande h1 {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(88, 64, 15);
 }
-.titulo_grande .nombre{
+
+.titulo_grande .nombre {
   font-size: 2em;
   color: #f94225;
   font-family: 'Luckiest Guy', cursive;
 }
+
+@media (max-width: 768px) {
+  .titulo_grande {
+    font-size: 1.5em;
+    top: 25%;
+  }
+
+  .titulo_grande .nombre {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo_grande {
+    font-size: 1.2em;
+    top: 30%;
+    width: 90%;
+  }
+
+  .titulo_grande .nombre {
+    font-size: 1.5em;
+  }
+}
+
 .titulo {
   
   margin-bottom: 180px;
@@ -72,6 +104,7 @@ body {
   font-weight: bold;
   letter-spacing: 10px;
   opacity: 0;
+  font-size: 1.5em;
   animation: fadeIn 3s ease-in-out forwards;
   text-align: center;
   z-index: 1;
